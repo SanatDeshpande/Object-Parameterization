@@ -2,3 +2,5 @@ pymrt
 numpy
 keras
 tensorflow
+matplotlib
+Pillow
