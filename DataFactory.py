@@ -18,7 +18,6 @@ def sum_arrays(arrays):
     total = np.zeros(arrays[0].shape)
     for i in arrays:
         total += i
-    #total = total / (np.max(total) / 255)
     total[total > 0] = 255
     total = total.astype(dtype=np.int32)
     return total
