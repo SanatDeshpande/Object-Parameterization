@@ -30,7 +30,7 @@ if __name__ == "__main__":
     for sample in range(samples):
         labels = []
         images = []
-        for i in range(15):
+        for i in range(1):
             label = [np.random.randint(1, 5),
                      np.random.randint(1, 5),
                      np.random.randint(1, 100) * .01,
@@ -43,11 +43,11 @@ if __name__ == "__main__":
         picture = sum_arrays(images)
         data_labels.append(labels.flatten())
         data_images.append(picture)
-        save(picture, "./data/" + str(sample) + ".jpg")
+        #save(picture, "./data/" + str(sample) + ".jpg")
     data_images = np.asarray(data_images)
     data_labels = np.asarray(data_labels)
     print(data_images.shape, data_labels.shape)
-    with open("images", "wb") as f:
+    with open("images_simple", "wb") as f:
         pickle.dump(data_images, f)
-    with open("vectors", "wb") as f:
+    with open("vectors_simple", "wb") as f:
         pickle.dump(data_labels, f)
