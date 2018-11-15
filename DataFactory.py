@@ -30,7 +30,7 @@ if __name__ == "__main__":
     for sample in range(samples):
         labels = []
         images = []
-        for i in range(1):
+        for i in range(15):
             label = [np.random.randint(1, 5),
                      np.random.randint(1, 5),
                      np.random.randint(1, 100) * .01,
@@ -43,7 +43,9 @@ if __name__ == "__main__":
         picture = sum_arrays(images)
         data_labels.append(labels.flatten())
         data_images.append(picture)
-        #save(picture, "./data/" + str(sample) + ".jpg")
+        save(picture, "./data/" + str(sample) + ".jpg")
+        print(data_labels)
+    sys.exit(1)
     data_images = np.asarray(data_images)
     data_labels = np.asarray(data_labels)
     print(data_images.shape, data_labels.shape)
